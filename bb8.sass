@@ -1,0 +1,451 @@
+// Variables
+$bg: #f5fafc
+$base: #ebf2fa
+$base-tint: #a7d0e0
+$stroke: #244356
+$orange: #fdc23e
+$blue: #449baa
+$red: #ff7761
+
+// Body
+*
+    box-sizing: border-box
+body
+    background: #eeeeee
+
+.artboard
+    width: 800px
+    height: 600px
+    background: $bg
+    box-shadow: 0px 3px 20px rgba(0,0,0,0.2)
+    border-radius: 3px
+    margin: 50px auto
+    border: 20px white solid
+    position: relative
+
+.bb8
+    width: 220px
+    height: 220px
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+
+
+.bb8-body
+    width: 220px
+    height: 220px
+    background: $base
+    position: absolute
+    border-radius: 50%
+    border: solid 8px $stroke
+    overflow: hidden
+    animation-name: spin
+    animation-duration: 0.8s
+    animation-timing-function: linear
+    animation-direction: reverse
+    animation-iteration-count: infinite
+
+.circles
+    width: 120px
+    height: 120px
+    border: 8px solid $stroke
+    border-radius: 50%
+    position: absolute
+    background-color: $orange
+
+    &:after
+        content: ''
+        display: block
+        border: 8px solid $stroke
+        background: $base
+        border-radius: 50%
+        position: absolute
+        top: 50%
+        left: 50%
+        transform: translate(-50%, -50%)
+        height: 35%
+        width: 35%
+
+.circle-1
+    top: 10
+    left: -38px
+
+.circle-2
+    top: 117px
+    left: 78px
+    height: 140px
+    width: 140px
+
+.circle-3
+    height: 300px
+    width: 300px
+    left: 120px
+    top: -180px
+
+.dot
+    height: 18px
+    width: 18px
+    border-radius: 50%
+    background: $stroke
+    position: absolute
+
+.dot-1
+    top: 75px
+    left: 113px
+
+.dot-2
+    top: 145px
+    left: 48px
+
+.line
+    position: absolute
+    height: 8px
+    width: 100px
+    background: $stroke
+    top: 50%
+    left: 50%
+
+.line-1
+    transform: rotate(40deg)
+    top: 48px
+    left: -70px
+
+.line-2
+    transform: rotate(170deg)
+    top: -45px
+    left: -60px
+
+
+.line-3
+    transform: rotate(-70deg)
+    top: 25px
+    left: 10px
+
+.body-shadow
+    width: 220px
+    height: 220px
+    border-radius: 50%
+    position: absolute
+    box-shadow: 0px 0px 60px rgba(0,0,0,0.3)
+    left: -50px
+    top: -20px
+    animation: none
+
+.bb8-head
+    width: 160px
+    height: 160px
+    // background: fade-out(pink, 0.7)
+    position: absolute
+    top: -70px
+    left: -30px
+    transform: rotate(-30deg)
+
+.head-top
+    width: 160px
+    height: 160px
+    background: $base
+    border: solid 8px $stroke
+    position: absolute
+    border-radius: 50%
+    box-shadow: -12px -2px 0px 3px rgba($blue, 0.4) inset
+
+.lens
+    width: 56px
+    height: 56px
+    border-radius: 50%
+    border: solid 8px $stroke
+    background: #295a6d
+    position: absolute
+    top: 20px
+    left:  50%
+    margin-left: -28px
+    overflow: hidden
+    &:before,
+    &:after
+        content: ''
+        display: block
+        width: 6px
+        height: 70px
+        background: $stroke
+        position: absolute
+        left: 10px
+        top: -20px
+        transform: rotate(30deg)
+    &:after
+        width: 10px
+        left: 25px
+        top: -10px
+
+.freckle
+    height: 18px
+    width: 18px
+    background: $stroke
+    border-radius: 50%
+    position: absolute
+    top: 60px
+    left: 120px
+
+
+
+.head-top-crop
+    height: 50%
+    overflow: hidden
+    position: relative
+
+.head-bottom
+    position: absolute
+    width: 100%
+    top: 80px
+
+.head-bottom-base,
+.head-side-1,
+.head-side-2
+    border-bottom: 8px solid $stroke
+    background: $base-tint
+    height: 20px
+    width: 100%
+    position: absolute
+
+
+
+
+.head-bottom-base
+    width: 78%
+    left: 11%
+
+.head-side-1
+    // display: none
+    width: 30px
+    transform: rotate(40deg)
+    transform-origin: bottom left
+    top: -16px
+    left: -3px
+    border-radius: 0px 0px 8px 8px
+.head-side-2
+    // display: none
+    width: 30px
+    transform: rotate(-40deg)
+    transform-origin: bottom right
+    position: absolute
+    top: -16px
+    right: -3px
+    border-radius: 0px 0px 8px 8px
+
+.speedlines > div
+    width: 55px
+    height: 8px
+    background: $stroke
+    border-radius: 8px
+    position: absolute
+    left: 120px
+
+    &.tail:after
+        content: ''
+        display: block
+        height: 8px
+        width: 15px
+        border-radius: 8px
+        background: $stroke
+        position: absolute
+        left: 100%
+        margin-left: 5px
+    
+    &.one
+        top: -70px
+        left: 53px
+    &.two
+        top: -30px
+        left: 113px
+    &.three
+        top: -18px
+        left: 98px
+    &.four
+        width: 30px
+        top: 115px
+        left: 200px
+    &.five
+        width: 30px
+        top: 130px
+        left: 210px
+.sparkles > div
+    width: 30px
+    height: 30px
+    position: absolute
+    // background-color: blue
+    &:before,
+    &:after  
+        content: ''
+        display: block
+        width: 30%
+        height: 100%
+        background: $red
+        position: absolute
+        top: 50%
+        left: 50%
+        border-radius: 30px
+        transform: translate(-50%, -50%)
+    &:after
+        transform: translate(-50%, -50%) rotate(90deg)
+    &.blue:before,
+    &.blue:after
+        background: $blue
+    &.orange:before,
+    &.orange:after
+        background: $orange
+
+    &.sm
+        transform: scale(0.3)
+    &.med
+        transform: scale(0.5)
+    &.lg
+        transform: scale(0.8)
+
+    &.one
+        top: -60px
+        left: 140px
+    &.two
+        top: -55px
+        left: 200px
+    &.three
+        top: -15px
+        left: 180px
+    &.four
+        top: -20px
+        left: 260px
+    &.five
+        top: 30px
+        left: 220px
+    &.six
+        top: 30px
+        left: 320px
+    &.seven
+        top: 60px
+        left: 290px
+    &.eight
+        top: 85px
+        left: 245px
+    &.nine
+        top: 35px
+        left: 370px
+    &.ten
+        top: 75px
+        left: 340px
+    &.eleven
+        top: 125px
+        left: 280px
+    &.twelve
+        top: 155px
+        left: 220px
+    &.thirteen
+        top: 190px
+        left: 170px
+    &.fourteen
+        top: 160px
+        left: 290px
+    &.fifteen
+        top: 130px
+        left: 360px
+    &.sixteen
+        top: 90px
+        left: 420px    
+
+.ground > div
+    height: 8px
+    width: 80px
+    background: $stroke
+    position: absolute
+    top: 212px    
+    left: -180px
+    border-radius: 8px
+    // margin-left: 10px
+    &.one .bump
+        left: 30px
+
+    &.two
+        width: 25px
+        left: -80px
+    &.three
+        width: 360px
+        left: -35px
+    &.four
+        width: 90px
+        left: 346px
+        .bump
+            left: 15px
+    &.five
+        width: 20px
+        left: 450px
+    &.six
+        width: 150px
+        left: -60px
+        top: 275px
+        .bump
+            left: 55px
+    &.seven
+        width: 200px
+        left: 130px
+        top: 275px
+        .bump
+            left: 80px
+    &.eight
+        width: 170px
+        left: 20px
+        top: 325px
+        .bump
+            left: 70px
+
+    .bump
+        height: 15px
+        width: 30px
+        position: absolute
+        top: -7px
+        overflow: hidden
+        &:after
+            content: ''
+            display: block
+            height: 30px
+            width: 30px
+            border: 8px solid $stroke
+            border-radius: 50%
+            background: $bg
+            box-sizing: border-box
+
+// Animation
+@keyframes spin 
+    
+    0%
+        transform: rotate(0deg)
+    100%
+        transform: rotate(360deg)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
